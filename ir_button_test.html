@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR Button API Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .response {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+            white-space: pre-wrap;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <h1>IR Button API Test</h1>
+    
+    <div class="section">
+        <h2>Add IR Button</h2>
+        <form id="addIrButtonForm">
+            <div class="form-group">
+                <label for="deviceId">Device ID:</label>
+                <input type="number" id="deviceId" name="deviceId" placeholder="Enter device ID" required>
+            </div>
+            <div class="form-group">
+                <label for="label">Button Label:</label>
+                <input type="text" id="label" name="label" placeholder="e.g., Power, Volume Up" required>
+            </div>
+            <div class="form-group">
+                <label for="command">IR Command:</label>
+                <input type="text" id="command" name="command" placeholder="Enter IR command code" required>
+            </div>
+            <div class="form-group">
+                <label for="icon">Icon:</label>
+                <input type="text" id="icon" name="icon" placeholder="e.g., power, volume-up" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color" value="#007bff" required>
+            </div>
+            <button type="submit">Add IR Button</button>
+        </form>
+        <div id="addResponse" class="response"></div>
+    </div>
+
+    <div class="section">
+        <h2>Get IR Buttons</h2>
+        <div class="form-group">
+            <label for="getDeviceId">Device ID:</label>
+            <input type="number" id="getDeviceId" placeholder="Enter device ID">
+        </div>
+        <button onclick="getIrButtons()">Get IR Buttons by Device ID</button>
+        <div id="getResponse" class="response"></div>
+    </div>
+
+    <div class="section">
+        <h2>Get IR Buttons by MAC</h2>
+        <div class="form-group">
+            <label for="getDeviceMac">Device MAC:</label>
+            <input type="text" id="getDeviceMac" placeholder="Enter device MAC address">
+        </div>
+        <button onclick="getIrButtonsByMac()">Get IR Buttons by MAC</button>
+        <div id="getByMacResponse" class="response"></div>
+    </div>
+
+    <div class="section">
+        <h2>Delete IR Button</h2>
+        <div class="form-group">
+            <label for="buttonId">Button ID:</label>
+            <input type="number" id="buttonId" placeholder="Enter button ID to delete">
+        </div>
+        <button onclick="deleteIrButton()">Delete IR Button</button>
+        <div id="deleteResponse" class="response"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3000/api/user';
+        
+        // You'll need to set this with a valid access token
+        let accessToken = 'YOUR_ACCESS_TOKEN_HERE';
+
+        async function makeRequest(url, options = {}) {
+            try {
+                const response = await fetch(url, {
+                    ...options,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${accessToken}`,
+                        ...options.headers
+                    }
+                });
+                
+                const data = await response.json();
+                return { success: response.ok, data, status: response.status };
+            } catch (error) {
+                return { success: false, data: { error: error.message }, status: 0 };
+            }
+        }
+
+        // Add IR Button
+        document.getElementById('addIrButtonForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = {
+                device_id: parseInt(formData.get('deviceId')),
+                label: formData.get('label'),
+                command: formData.get('command'),
+                icon: formData.get('icon'),
+                color: formData.get('color')
+            };
+
+            const result = await makeRequest(`${API_BASE}/device/ir-button`, {
+                method: 'POST',
+                body: JSON.stringify(data)
+            });
+
+            const responseDiv = document.getElementById('addResponse');
+            responseDiv.textContent = JSON.stringify(result.data, null, 2);
+            responseDiv.className = `response ${result.success ? 'success' : 'error'}`;
+        });
+
+        // Get IR Buttons by Device ID
+        async function getIrButtons() {
+            const deviceId = document.getElementById('getDeviceId').value;
+            if (!deviceId) {
+                alert('Please enter a device ID');
+                return;
+            }
+
+            const result = await makeRequest(`${API_BASE}/device/${deviceId}/ir-buttons`);
+            
+            const responseDiv = document.getElementById('getResponse');
+            responseDiv.textContent = JSON.stringify(result.data, null, 2);
+            responseDiv.className = `response ${result.success ? 'success' : 'error'}`;
+        }
+
+        // Get IR Buttons by MAC
+        async function getIrButtonsByMac() {
+            const deviceMac = document.getElementById('getDeviceMac').value;
+            if (!deviceMac) {
+                alert('Please enter a device MAC address');
+                return;
+            }
+
+            const result = await makeRequest(`${API_BASE}/device/mac/${deviceMac}/ir-buttons`);
+            
+            const responseDiv = document.getElementById('getByMacResponse');
+            responseDiv.textContent = JSON.stringify(result.data, null, 2);
+            responseDiv.className = `response ${result.success ? 'success' : 'error'}`;
+        }
+
+        // Delete IR Button
+        async function deleteIrButton() {
+            const buttonId = document.getElementById('buttonId').value;
+            if (!buttonId) {
+                alert('Please enter a button ID');
+                return;
+            }
+
+            const result = await makeRequest(`${API_BASE}/device/ir-button/${buttonId}`, {
+                method: 'DELETE'
+            });
+
+            const responseDiv = document.getElementById('deleteResponse');
+            responseDiv.textContent = JSON.stringify(result.data, null, 2);
+            responseDiv.className = `response ${result.success ? 'success' : 'error'}`;
+        }
+    </script>
+</body>
+</html>

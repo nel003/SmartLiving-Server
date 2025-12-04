@@ -1,0 +1,936 @@
+2025-10-31 00:27:13 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+src/utils/validation.ts(326,2): error TS1005: ')' expected.
+src/utils/validation.ts(329,14): error TS1005: ':' expected.
+src/utils/validation.ts(373,2): error TS1005: ',' expected.
+src/utils/validation.ts(376,14): error TS1005: ':' expected.
+src/utils/validation.ts(395,2): error TS1005: ',' expected.
+src/utils/validation.ts(397,8): error TS1005: ':' expected.
+src/utils/validation.ts(397,16): error TS1005: ':' expected.
+src/utils/validation.ts(397,33): error TS1005: ',' expected.
+src/utils/validation.ts(398,1): error TS1005: '}' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/utils/validation.ts(326,2): error TS1005: ')' expected.
+src/utils/validation.ts(329,14): error TS1005: ':' expected.
+src/utils/validation.ts(373,2): error TS1005: ',' expected.
+src/utils/validation.ts(376,14): error TS1005: ':' expected.
+src/utils/validation.ts(395,2): error TS1005: ',' expected.
+src/utils/validation.ts(397,8): error TS1005: ':' expected.
+src/utils/validation.ts(397,16): error TS1005: ':' expected.
+src/utils/validation.ts(397,33): error TS1005: ',' expected.
+src/utils/validation.ts(398,1): error TS1005: '}' expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\utils\validation.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+Error: ⨯ Unable to compile TypeScript:
+src/utils/validation.ts(326,2): error TS1005: ')' expected.
+src/utils/validation.ts(329,14): error TS1005: ':' expected.
+src/utils/validation.ts(373,2): error TS1005: ',' expected.
+src/utils/validation.ts(376,14): error TS1005: ':' expected.
+src/utils/validation.ts(395,2): error TS1005: ',' expected.
+src/utils/validation.ts(397,8): error TS1005: ':' expected.
+src/utils/validation.ts(397,16): error TS1005: ':' expected.
+src/utils/validation.ts(397,33): error TS1005: ',' expected.
+src/utils/validation.ts(398,1): error TS1005: '}' expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\utils\validation.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+{
+  "error": {},
+  "exception": true,
+  "date": "Fri Oct 31 2025 00:27:13 GMT+0800 (Philippine Standard Time)",
+  "process": {
+    "pid": 13836,
+    "uid": null,
+    "gid": null,
+    "cwd": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v23.5.0",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "src/server.ts"
+    ],
+    "memoryUsage": {
+      "rss": 79814656,
+      "heapTotal": 33533952,
+      "heapUsed": 16444328,
+      "external": 2380148,
+      "arrayBuffers": 77735
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 96262.156
+  },
+  "trace": [
+    {
+      "column": 7,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\utils\\validation.ts",
+      "function": null,
+      "line": 1,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1740,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\source-map-support\\source-map-support.js",
+      "function": "Module._compile",
+      "line": 568,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 33,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-5223286574100707.js",
+      "function": "Module.m._compile",
+      "line": 69,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1905,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-5223286574100707.js",
+      "function": "require.extensions..jsx.require.extensions..js",
+      "line": 114,
+      "method": ".js",
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-5223286574100707.js",
+      "function": "require.extensions.<computed>",
+      "line": 71,
+      "method": "<computed>",
+      "native": false
+    },
+    {
+      "column": 13,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\ts-node-dev\\lib\\hook.js",
+      "function": "Object.nodeDevHook [as .ts]",
+      "line": 63,
+      "method": "ts]",
+      "native": false
+    },
+    {
+      "column": 32,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.load",
+      "line": 1474,
+      "method": "load",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1286,
+      "method": "_load",
+      "native": false
+    }
+  ],
+  "service": "smartliving-server"
+}
+2025-10-31 00:28:03 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+src/utils/validation.ts(326,2): error TS1005: ')' expected.
+src/utils/validation.ts(329,14): error TS1005: ':' expected.
+src/utils/validation.ts(373,2): error TS1005: ',' expected.
+src/utils/validation.ts(376,14): error TS1005: ':' expected.
+src/utils/validation.ts(395,2): error TS1005: ',' expected.
+src/utils/validation.ts(397,8): error TS1005: ':' expected.
+src/utils/validation.ts(397,16): error TS1005: ':' expected.
+src/utils/validation.ts(397,33): error TS1005: ',' expected.
+src/utils/validation.ts(398,1): error TS1005: '}' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/utils/validation.ts(326,2): error TS1005: ')' expected.
+src/utils/validation.ts(329,14): error TS1005: ':' expected.
+src/utils/validation.ts(373,2): error TS1005: ',' expected.
+src/utils/validation.ts(376,14): error TS1005: ':' expected.
+src/utils/validation.ts(395,2): error TS1005: ',' expected.
+src/utils/validation.ts(397,8): error TS1005: ':' expected.
+src/utils/validation.ts(397,16): error TS1005: ':' expected.
+src/utils/validation.ts(397,33): error TS1005: ',' expected.
+src/utils/validation.ts(398,1): error TS1005: '}' expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\utils\validation.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+Error: ⨯ Unable to compile TypeScript:
+src/utils/validation.ts(326,2): error TS1005: ')' expected.
+src/utils/validation.ts(329,14): error TS1005: ':' expected.
+src/utils/validation.ts(373,2): error TS1005: ',' expected.
+src/utils/validation.ts(376,14): error TS1005: ':' expected.
+src/utils/validation.ts(395,2): error TS1005: ',' expected.
+src/utils/validation.ts(397,8): error TS1005: ':' expected.
+src/utils/validation.ts(397,16): error TS1005: ':' expected.
+src/utils/validation.ts(397,33): error TS1005: ',' expected.
+src/utils/validation.ts(398,1): error TS1005: '}' expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\utils\validation.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-5223286574100707.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+{
+  "error": {},
+  "exception": true,
+  "date": "Fri Oct 31 2025 00:28:03 GMT+0800 (Philippine Standard Time)",
+  "process": {
+    "pid": 5872,
+    "uid": null,
+    "gid": null,
+    "cwd": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v23.5.0",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "src/server.ts"
+    ],
+    "memoryUsage": {
+      "rss": 79794176,
+      "heapTotal": 31961088,
+      "heapUsed": 19049984,
+      "external": 2380148,
+      "arrayBuffers": 77775
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 96311.5
+  },
+  "trace": [
+    {
+      "column": 7,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\utils\\validation.ts",
+      "function": null,
+      "line": 1,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1740,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\source-map-support\\source-map-support.js",
+      "function": "Module._compile",
+      "line": 568,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 33,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-5223286574100707.js",
+      "function": "Module.m._compile",
+      "line": 69,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1905,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-5223286574100707.js",
+      "function": "require.extensions..jsx.require.extensions..js",
+      "line": 114,
+      "method": ".js",
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-5223286574100707.js",
+      "function": "require.extensions.<computed>",
+      "line": 71,
+      "method": "<computed>",
+      "native": false
+    },
+    {
+      "column": 13,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\ts-node-dev\\lib\\hook.js",
+      "function": "Object.nodeDevHook [as .ts]",
+      "line": 63,
+      "method": "ts]",
+      "native": false
+    },
+    {
+      "column": 32,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.load",
+      "line": 1474,
+      "method": "load",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1286,
+      "method": "_load",
+      "native": false
+    }
+  ],
+  "service": "smartliving-server"
+}
+2025-11-18 16:21:48 [ERROR]: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\routes\rooms.ts:10:8)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-4637015227681551.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-4637015227681551.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-4637015227681551.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\express\lib\router\route.js:216:15)
+    at Function.proto.<computed> [as get] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\express\lib\router\index.js:521:19)
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\routes\rooms.ts:10:8)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-4637015227681551.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-4637015227681551.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-4637015227681551.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+{
+  "error": {},
+  "exception": true,
+  "date": "Tue Nov 18 2025 16:21:48 GMT+0800 (Philippine Standard Time)",
+  "process": {
+    "pid": 32376,
+    "uid": null,
+    "gid": null,
+    "cwd": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v23.5.0",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "src/server.ts"
+    ],
+    "memoryUsage": {
+      "rss": 84578304,
+      "heapTotal": 37863424,
+      "heapUsed": 28291408,
+      "external": 2428812,
+      "arrayBuffers": 123412
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 190437.656
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\express\\lib\\router\\route.js",
+      "function": "Route.<computed> [as get]",
+      "line": 216,
+      "method": "<computed> [as get]",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\express\\lib\\router\\index.js",
+      "function": "Function.proto.<computed> [as get]",
+      "line": 521,
+      "method": "<computed> [as get]",
+      "native": false
+    },
+    {
+      "column": 8,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\routes\\rooms.ts",
+      "function": null,
+      "line": 10,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1740,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\source-map-support\\source-map-support.js",
+      "function": "Module._compile",
+      "line": 568,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 33,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-4637015227681551.js",
+      "function": "Module.m._compile",
+      "line": 69,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1905,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-4637015227681551.js",
+      "function": "require.extensions..jsx.require.extensions..js",
+      "line": 114,
+      "method": ".js",
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-4637015227681551.js",
+      "function": "require.extensions.<computed>",
+      "line": 71,
+      "method": "<computed>",
+      "native": false
+    },
+    {
+      "column": 13,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\ts-node-dev\\lib\\hook.js",
+      "function": "Object.nodeDevHook [as .ts]",
+      "line": 63,
+      "method": "ts]",
+      "native": false
+    }
+  ],
+  "service": "smartliving-server"
+}
+2025-12-02 15:40:47 [ERROR]: uncaughtException: Cannot find module '../middleware/auth'
+Require stack:
+- C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\routes\energy.ts
+- C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\server.ts
+Error: Cannot find module '../middleware/auth'
+Require stack:
+- C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\routes\energy.ts
+- C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\server.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1410:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)
+    at Module.require (node:internal/modules/cjs/loader:1496:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\routes\energy.ts:3:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+Error: Cannot find module '../middleware/auth'
+Require stack:
+- C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\routes\energy.ts
+- C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\server.ts
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1410:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:234:24)
+    at Module.require (node:internal/modules/cjs/loader:1496:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\routes\energy.ts:3:1)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+{
+  "error": {
+    "code": "MODULE_NOT_FOUND",
+    "requireStack": [
+      "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\routes\\energy.ts",
+      "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\server.ts"
+    ]
+  },
+  "exception": true,
+  "date": "Tue Dec 02 2025 15:40:47 GMT+0800 (Philippine Standard Time)",
+  "process": {
+    "pid": 32208,
+    "uid": null,
+    "gid": null,
+    "cwd": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v23.5.0",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "src/server.ts"
+    ],
+    "memoryUsage": {
+      "rss": 91549696,
+      "heapTotal": 58048512,
+      "heapUsed": 25609080,
+      "external": 2428812,
+      "arrayBuffers": 125178
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 1397555.468
+  },
+  "trace": [
+    {
+      "column": 15,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._resolveFilename",
+      "line": 1410,
+      "method": "_resolveFilename",
+      "native": false
+    },
+    {
+      "column": 19,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "defaultResolveImpl",
+      "line": 1061,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 22,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "resolveForCJSWithHooks",
+      "line": 1066,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 37,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1215,
+      "method": "_load",
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:diagnostics_channel",
+      "function": "TracingChannel.traceSync",
+      "line": 322,
+      "method": "traceSync",
+      "native": false
+    },
+    {
+      "column": 24,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "wrapModuleLoad",
+      "line": 234,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.require",
+      "line": 1496,
+      "method": "require",
+      "native": false
+    },
+    {
+      "column": 16,
+      "file": "node:internal/modules/helpers",
+      "function": "require",
+      "line": 135,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 1,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\routes\\energy.ts",
+      "function": null,
+      "line": 3,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1740,
+      "method": null,
+      "native": false
+    }
+  ],
+  "service": "smartliving-server"
+}
+2025-12-02 15:53:05 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/energyController.ts(119,26): error TS1005: ',' expected.
+src/controllers/energyController.ts(130,10): error TS1005: ',' expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/energyController.ts(119,26): error TS1005: ',' expected.
+src/controllers/energyController.ts(130,10): error TS1005: ',' expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\controllers\energyController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/energyController.ts(119,26): error TS1005: ',' expected.
+src/controllers/energyController.ts(130,10): error TS1005: ',' expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\controllers\energyController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+{
+  "error": {},
+  "exception": true,
+  "date": "Tue Dec 02 2025 15:53:05 GMT+0800 (Philippine Standard Time)",
+  "process": {
+    "pid": 27624,
+    "uid": null,
+    "gid": null,
+    "cwd": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v23.5.0",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "src/server.ts"
+    ],
+    "memoryUsage": {
+      "rss": 90177536,
+      "heapTotal": 57262080,
+      "heapUsed": 27754376,
+      "external": 2428812,
+      "arrayBuffers": 125109
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 1398292.718
+  },
+  "trace": [
+    {
+      "column": 7,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\controllers\\energyController.ts",
+      "function": null,
+      "line": 1,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1740,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\source-map-support\\source-map-support.js",
+      "function": "Module._compile",
+      "line": 568,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 33,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-8105603361494416.js",
+      "function": "Module.m._compile",
+      "line": 69,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1905,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-8105603361494416.js",
+      "function": "require.extensions..jsx.require.extensions..js",
+      "line": 114,
+      "method": ".js",
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-8105603361494416.js",
+      "function": "require.extensions.<computed>",
+      "line": 71,
+      "method": "<computed>",
+      "native": false
+    },
+    {
+      "column": 13,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\ts-node-dev\\lib\\hook.js",
+      "function": "Object.nodeDevHook [as .ts]",
+      "line": 63,
+      "method": "ts]",
+      "native": false
+    },
+    {
+      "column": 32,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.load",
+      "line": 1474,
+      "method": "load",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1286,
+      "method": "_load",
+      "native": false
+    }
+  ],
+  "service": "smartliving-server"
+}
+2025-12-02 15:56:20 [ERROR]: uncaughtException: ⨯ Unable to compile TypeScript:
+src/controllers/energyController.ts(15,23): error TS1005: ';' expected.
+src/controllers/energyController.ts(17,13): error TS1472: 'catch' or 'finally' expected.
+src/controllers/energyController.ts(18,9): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(18,10): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(32,5): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(32,7): error TS1005: 'try' expected.
+src/controllers/energyController.ts(39,1): error TS1128: Declaration or statement expected.
+
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/energyController.ts(15,23): error TS1005: ';' expected.
+src/controllers/energyController.ts(17,13): error TS1472: 'catch' or 'finally' expected.
+src/controllers/energyController.ts(18,9): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(18,10): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(32,5): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(32,7): error TS1005: 'try' expected.
+src/controllers/energyController.ts(39,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\controllers\energyController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+Error: ⨯ Unable to compile TypeScript:
+src/controllers/energyController.ts(15,23): error TS1005: ';' expected.
+src/controllers/energyController.ts(17,13): error TS1472: 'catch' or 'finally' expected.
+src/controllers/energyController.ts(18,9): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(18,10): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(32,5): error TS1128: Declaration or statement expected.
+src/controllers/energyController.ts(32,7): error TS1005: 'try' expected.
+src/controllers/energyController.ts(39,1): error TS1128: Declaration or statement expected.
+
+    at Object.<anonymous> (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\controllers\energyController.ts:1:7)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1740:14)
+    at Module._compile (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\source-map-support\source-map-support.js:568:25)
+    at Module.m._compile (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:69:33)
+    at node:internal/modules/cjs/loader:1905:10
+    at require.extensions..jsx.require.extensions..js (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:114:20)
+    at require.extensions.<computed> (C:\Users\bispl\AppData\Local\Temp\ts-node-dev-hook-8105603361494416.js:71:20)
+    at Object.nodeDevHook [as .ts] (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\node_modules\ts-node-dev\lib\hook.js:63:13)
+    at Module.load (node:internal/modules/cjs/loader:1474:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+{
+  "error": {},
+  "exception": true,
+  "date": "Tue Dec 02 2025 15:56:20 GMT+0800 (Philippine Standard Time)",
+  "process": {
+    "pid": 42088,
+    "uid": null,
+    "gid": null,
+    "cwd": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v23.5.0",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "src/server.ts"
+    ],
+    "memoryUsage": {
+      "rss": 90812416,
+      "heapTotal": 57262080,
+      "heapUsed": 26923792,
+      "external": 2428812,
+      "arrayBuffers": 125581
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 1398488.015
+  },
+  "trace": [
+    {
+      "column": 7,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\controllers\\energyController.ts",
+      "function": null,
+      "line": 1,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 14,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1740,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 25,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\source-map-support\\source-map-support.js",
+      "function": "Module._compile",
+      "line": 568,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 33,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-8105603361494416.js",
+      "function": "Module.m._compile",
+      "line": 69,
+      "method": "_compile",
+      "native": false
+    },
+    {
+      "column": 10,
+      "file": "node:internal/modules/cjs/loader",
+      "function": null,
+      "line": 1905,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-8105603361494416.js",
+      "function": "require.extensions..jsx.require.extensions..js",
+      "line": 114,
+      "method": ".js",
+      "native": false
+    },
+    {
+      "column": 20,
+      "file": "C:\\Users\\bispl\\AppData\\Local\\Temp\\ts-node-dev-hook-8105603361494416.js",
+      "function": "require.extensions.<computed>",
+      "line": 71,
+      "method": "<computed>",
+      "native": false
+    },
+    {
+      "column": 13,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\node_modules\\ts-node-dev\\lib\\hook.js",
+      "function": "Object.nodeDevHook [as .ts]",
+      "line": 63,
+      "method": "ts]",
+      "native": false
+    },
+    {
+      "column": 32,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Module.load",
+      "line": 1474,
+      "method": "load",
+      "native": false
+    },
+    {
+      "column": 12,
+      "file": "node:internal/modules/cjs/loader",
+      "function": "Function._load",
+      "line": 1286,
+      "method": "_load",
+      "native": false
+    }
+  ],
+  "service": "smartliving-server"
+}

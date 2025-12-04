@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmartLiving Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ADFFBF", // Light Green
+              "background-light": "#FFFFFF",
+              "background-dark": "#121212",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem", // 8px
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display bg-background-light dark:bg-background-dark">
+    <div class="flex flex-col h-screen justify-between p-6">
+      <div class="flex-grow flex flex-col items-center pt-16">
+        <div class="text-center mb-12">
+          <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
+            SmartLiving
+          </h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Login to Accept Invitation</p>
+        </div>
+        <div
+          class="w-full max-w-sm bg-gray-100 dark:bg-gray-800 p-1 rounded-lg flex space-x-1 mb-8 justify-center"
+        >
+          <button
+            class="w-1/2 text-center py-2.5 text-sm font-semibold text-gray-900 dark:text-white relative"
+          >
+            Login
+            <span
+              class="absolute bottom-0 left-1/4 right-1/4 h-0.5 bg-[#ADFFBF]"
+            ></span>
+          </button>
+        </div>
+        <form class="w-full max-w-sm space-y-5">
+          <div>
+            <label
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              for="email"
+              >Username or Email</label
+            >
+            <input
+              class="w-full px-4 py-3 bg-background-light dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary"
+              id="email"
+              placeholder="e.g john@domain.com"
+              type="email"
+            />
+          </div>
+          <div>
+            <label
+              class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              for="password"
+              >Password</label
+            >
+            <input
+              class="w-full px-4 py-3 bg-background-light dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary"
+              id="password"
+              placeholder="e.g zdsdkjhysd@34358"
+              type="password"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="w-full max-w-sm mx-auto pb-12">
+        <button type="submit" onclick="login()"
+          class="w-full bg-primary text-gray-800 font-semibold py-4 rounded-lg shadow-md hover:opacity-90 transition-opacity"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+
+    <script>
+      async function accept(accessToken, refreshToken) {
+        console.log(accessToken, refreshToken);
+        try {
+          const urlParams = new URLSearchParams(window.location.search);
+          const token = urlParams.get("token");
+
+          const res = await fetch("/api/home/invite/accept", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "x-refresh-token": refreshToken,
+              "Authorization": "Bearer " + accessToken,
+            },
+            body: JSON.stringify({ token }),
+          });
+
+          if (res.ok) {
+            alert("Invitation accepted successfully!");
+          } else {
+            const errorData = await res.json();
+            alert("Failed to accept invitation: " + errorData.message);
+          }
+        } catch (error) {
+          alert("An error occurred while accepting the invitation. Please try again.");
+          console.error("Error accepting invitation:", error);
+        }
+      }
+
+      async function login() {
+        try {
+          // Handle form submission logic here
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          const res = await fetch("/api/user/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ usernameOrEmail: email, password }),
+          });
+          const data = await res.json();
+          const accessToken = data.data.accessToken;
+          const refreshToken = data.data.refreshToken;
+
+          accept(accessToken, refreshToken);
+        } catch (error) {
+          alert("An error occurred during login. Please try again.");
+          console.error("Error during login:", error);
+        }
+      }
+
+      const forms = document.querySelector("form");
+      forms.addEventListener("submit", (e) => {
+        console.log("Submitting form...");
+        e.preventDefault();
+
+        login();
+      });
+    </script>
+  </body>
+</html>

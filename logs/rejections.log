@@ -1,0 +1,68 @@
+2025-09-18 22:42:02 [ERROR]: unhandledRejection: query?.replace is not a function
+TypeError: query?.replace is not a function
+    at Object.error (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\utils\logger.ts:127:31)
+    at update (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\api\user\profile.ts:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+TypeError: query?.replace is not a function
+    at Object.error (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\utils\logger.ts:127:31)
+    at update (C:\Users\bispl\OneDrive\Desktop\arns\SmartLiving-Server\src\api\user\profile.ts:72:28)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+{
+  "error": {},
+  "rejection": true,
+  "date": "Thu Sep 18 2025 22:42:02 GMT+0800 (Philippine Standard Time)",
+  "process": {
+    "pid": 29096,
+    "uid": null,
+    "gid": null,
+    "cwd": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server",
+    "execPath": "C:\\Program Files\\nodejs\\node.exe",
+    "version": "v23.5.0",
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "src/server.ts"
+    ],
+    "memoryUsage": {
+      "rss": 85921792,
+      "heapTotal": 27639808,
+      "heapUsed": 26207096,
+      "external": 2487466,
+      "arrayBuffers": 57990
+    }
+  },
+  "os": {
+    "loadavg": [
+      0,
+      0,
+      0
+    ],
+    "uptime": 178396.546
+  },
+  "trace": [
+    {
+      "column": 31,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\utils\\logger.ts",
+      "function": "Object.error",
+      "line": 127,
+      "method": "error",
+      "native": false
+    },
+    {
+      "column": 28,
+      "file": "C:\\Users\\bispl\\OneDrive\\Desktop\\arns\\SmartLiving-Server\\src\\api\\user\\profile.ts",
+      "function": "update",
+      "line": 72,
+      "method": null,
+      "native": false
+    },
+    {
+      "column": 5,
+      "file": "node:internal/process/task_queues",
+      "function": "processTicksAndRejections",
+      "line": 105,
+      "method": null,
+      "native": false
+    }
+  ],
+  "service": "smartliving-server"
+}

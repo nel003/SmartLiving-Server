@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const validateUser_1 = require("../middleware/validateUser");
+const device_1 = require("../api/device");
+const validation_1 = require("../utils/validation");
+const router = (0, express_1.Router)();
+router.get('/room/:room_name', validateUser_1.validateUser, device_1.device.getAll);
+router.post('/', validateUser_1.validateUser, (0, validation_1.validate)(validation_1.validationSchemas.addDevice), device_1.device.add);
+router.put('/:device_id', validateUser_1.validateUser, (0, validation_1.validate)(validation_1.validationSchemas.updateDevice, 'body'), device_1.device.update);
+router.delete('/:device_id', validateUser_1.validateUser, (0, validation_1.validate)(validation_1.validationSchemas.deviceId, 'params'), device_1.device.delete);
+router.post('/ir-button', validateUser_1.validateUser, (0, validation_1.validate)(validation_1.validationSchemas.addIrButton), device_1.device.addIrButton);
+router.get('/:device_id/ir-buttons', validateUser_1.validateUser, (0, validation_1.validate)(validation_1.validationSchemas.deviceId, 'params'), device_1.device.getIrButtons);
+router.get('/mac/:device_mac/ir-buttons', validateUser_1.validateUser, (0, validation_1.validate)(validation_1.validationSchemas.deviceMac, 'params'), device_1.device.getIrButtonsByMac);
+router.delete('/ir-button/:buttonId', validateUser_1.validateUser, (0, validation_1.validate)(validation_1.validationSchemas.buttonId, 'params'), device_1.device.deleteIrButton);
+exports.default = router;

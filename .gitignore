@@ -1,0 +1,12 @@
+# Ignore dependencies and logs
+logs/
+node_modules/
+*.log
+.env 
+# Ignore everything in general
+# but we’ll make exceptions below if needed
+# (optional – only if you want a strict setup)
+# *
+
+# Exception: include the JSON credentials file
+!smart-living-b4e4e-15aae37ffbdb.json
