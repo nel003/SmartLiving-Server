@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2025 at 05:13 PM
+-- Generation Time: Jan 29, 2026 at 05:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,7 +34,31 @@ CREATE TABLE `devices` (
   `icon` varchar(60) DEFAULT NULL,
   `type` enum('relay','ir') DEFAULT NULL,
   `pin` int(11) NOT NULL,
-  `room_id` int(11) DEFAULT NULL
+  `cs_pin` int(11) DEFAULT NULL,
+  `room_id` int(11) DEFAULT NULL,
+  `base_on_motion` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `energy_data`
+--
+
+CREATE TABLE `energy_data` (
+  `id` int(11) NOT NULL,
+  `device_id` int(11) NOT NULL,
+  `home_id` int(11) NOT NULL,
+  `address` int(11) NOT NULL,
+  `frequency` float DEFAULT NULL,
+  `voltage` float DEFAULT NULL,
+  `current` float DEFAULT NULL,
+  `active_power` float DEFAULT NULL,
+  `reactive_power` float DEFAULT NULL,
+  `apparent_power` float DEFAULT NULL,
+  `power_factor` float DEFAULT NULL,
+  `active_energy` float DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -52,6 +76,20 @@ CREATE TABLE `home_keys` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `invitations`
+--
+
+CREATE TABLE `invitations` (
+  `id` int(11) NOT NULL,
+  `home_id` int(11) DEFAULT NULL,
+  `token` varchar(200) DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `ir_buttons`
 --
 
@@ -60,6 +98,7 @@ CREATE TABLE `ir_buttons` (
   `device_id` int(11) NOT NULL,
   `label` varchar(255) NOT NULL,
   `command` text NOT NULL,
+  `address` varchar(100) DEFAULT NULL,
   `protocol` varchar(50) NOT NULL DEFAULT 'NEC' COMMENT 'IR protocol used for the command (NEC, RC5, RC6, Sony, etc.)',
   `icon` varchar(255) NOT NULL,
   `color` varchar(50) NOT NULL,
@@ -146,11 +185,26 @@ ALTER TABLE `devices`
   ADD KEY `room_id` (`room_id`);
 
 --
+-- Indexes for table `energy_data`
+--
+ALTER TABLE `energy_data`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_device_address_created` (`device_id`,`address`,`created_at`);
+
+--
 -- Indexes for table `home_keys`
 --
 ALTER TABLE `home_keys`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `value` (`value`);
+
+--
+-- Indexes for table `invitations`
+--
+ALTER TABLE `invitations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `home_id` (`home_id`),
+  ADD KEY `created_by` (`created_by`);
 
 --
 -- Indexes for table `ir_buttons`
@@ -213,9 +267,21 @@ ALTER TABLE `devices`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `energy_data`
+--
+ALTER TABLE `energy_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `home_keys`
 --
 ALTER TABLE `home_keys`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `invitations`
+--
+ALTER TABLE `invitations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -263,6 +329,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `devices`
   ADD CONSTRAINT `devices_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`);
+
+--
+-- Constraints for table `invitations`
+--
+ALTER TABLE `invitations`
+  ADD CONSTRAINT `invitations_ibfk_1` FOREIGN KEY (`home_id`) REFERENCES `home_keys` (`id`),
+  ADD CONSTRAINT `invitations_ibfk_2` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `ir_buttons`
